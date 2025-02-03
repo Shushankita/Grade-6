@@ -1,0 +1,21 @@
+import tkinter as tk
+def add():
+    answer.config(text="I perform addition")
+
+def subtract(): #defining function to execute when "-" button is clicked. 
+    answer.config(text="I perform subtraction")
+  
+window=tk.Tk()
+window.title("Calculator Application")
+window.geometry("400x300")
+text=tk.Label(window,text="Calculator")
+text.pack()
+
+button1=tk.Button(window,text="+",command=add)
+button1.pack()
+button2=tk.Button(window,text="-",command=subtract)#button for subtraction
+button2.pack()
+
+answer=tk.Label(window,text="Answer")
+answer.pack()
+window.mainloop()
